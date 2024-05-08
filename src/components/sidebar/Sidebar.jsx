@@ -6,6 +6,8 @@ import InventoryIcon from '@mui/icons-material/Inventory';
 import StoreIcon from '@mui/icons-material/Store';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import ExitToAppIcon from '@mui/icons-material/ExitToApp';
+import CategoryIcon from '@mui/icons-material/Category';
+
 
 const Sidebar = () => {
   return (
@@ -40,6 +42,12 @@ const Sidebar = () => {
             <StoreIcon className="icon" />
             <span>Orders</span>      
       </li>
+      <Link to="/categories">
+      <li>
+            <CategoryIcon className="icon" />
+            <span>Categories</span>
+        </li>
+      </Link>
       <p className="title">USER</p>
       <li>
             <AccountCircleIcon className="icon" />
