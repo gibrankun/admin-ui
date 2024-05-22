@@ -1,30 +1,28 @@
-import React from "react";
-import { DataGrid } from "@mui/x-data-grid";
 import "./mydatatable.scss";
-import { Link } from "react-router-dom";
+import { DataGrid } from "@mui/x-data-grid";
 
 const columns = [
   { field: "id", headerName: "ID", width: 70 },
-  { field: "Name", headerName: "Name", width: 130 },
+  { field: "name", headerName: "Name", width: 130 },
 ];
 
 const rows = [
-  { id: 1, Name: "Americano"},
-  { id: 2, Name: "Robusta"},
-  { id: 3, Name: "Arabika"},
-  { id: 4, Name: "Vietnam Drips"},
-  { id: 5, Name: "Cappucino"},
-  { id: 6, Name: "Espreso"},
-  { id: 7, Name: "Jamaica Blue Mountain"},
-  { id: 8, Name: "Caramel Macchiato"},
-  { id: 9, Name: "Kopi Bali"},
-  { id: 10, Name: "Liberika"},
+  { id: 1, name: "Coffee" },
+  { id: 2, name: "Non Coffee" },
+  { id: 3, name: "Cake" },
+  { id: 4, name: "Pastry" },
+  { id: 5, name: "Cookie" },
+  { id: 6, name: "Candy" },
+  { id: 7, name: "Rice" },
+  { id: 8, name: "Pasta" },
+  { id: 9, name: "Salad" },
+  { id: 10, name: "Steak" },
 ];
 
 const MyDatatable = ({ title }) => {
   return (
-    <div className="datatable">
-      <div className="datatableTitle">All Data</div>
+    <div className="myDatatable">
+      <div className="myDatatableTitle">{title}</div>
       <DataGrid
         rows={rows}
         columns={columns}
