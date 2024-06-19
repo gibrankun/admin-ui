@@ -2,9 +2,9 @@ import "./single.scss";
 import Sidebar from "../../components/sidebar/Sidebar";
 import Navbar from "../../components/navbar/Navbar";
 import Chart from "../../components/chart/Chart";
-import List from "../../components/datatable/Datatable";
+import Datatable from "../../components/datatable/Datatable";
 
-const Single = () => {
+const Single = (columns) => {
   return (
     <div className="single">
       <Sidebar />
@@ -49,7 +49,7 @@ const Single = () => {
         </div>
         <div className="bottom">
           <h1 className="title">Last Transactions</h1>
-          <List />
+          <Datatable columns={columns} />
         </div>
       </div>
     </div>
