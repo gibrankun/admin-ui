@@ -17,6 +17,13 @@ describe('template spec', () => {
     cy.get('[data-testid="submit"]').click()
 
     cy.get('div.home')
-          .should('be.visible')
+    .should('be.visible')
+
+    cy.get('div.sidebar')
+    .should('be.visible')
+
+    cy.get('[data-testid="users"]').click()
+
+    cy.url().should('include', '/users')
   })
 })
