@@ -4,6 +4,7 @@ import PersonOutlinedIcon from "@mui/icons-material/PersonOutlined";
 import AccountBalanceWalletOutlinedIcon from "@mui/icons-material/AccountBalanceWalletOutlined";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import MonetizationOnOutlinedIcon from "@mui/icons-material/MonetizationOnOutlined";
+import CategoryIcon from "@mui/icons-material/Category";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import { useEffect, useState } from "react";
 import { collection, query, where, getDocs } from "firebase/firestore";
@@ -35,7 +36,7 @@ const Widget = ({ type }) => {
       break;
     case "order":
       data = {
-        title: "ORDERS",
+        title: "PRODUCTS",
         isMoney: false,
         link: "View all orders",
         query : "products",
@@ -76,6 +77,23 @@ const Widget = ({ type }) => {
             style={{
               backgroundColor: "rgba(128, 0, 128, 0.2)",
               color: "purple",
+            }}
+          />
+        ),
+      };
+      break;
+      case "category":
+      data = {
+        title: "CATEGORIES",
+        isMoney: false,
+        link: "View all categories",
+        query: "categories",
+        icon: (
+          <CategoryIcon
+            className="icon"
+            style={{
+              backgroundColor: "rgba(255, 0, 0, 0.2)",
+              color: "crimson",
             }}
           />
         ),
