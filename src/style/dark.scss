@@ -1,65 +1,99 @@
 .app.dark {
-    background-color: #111;
-    color: rgb(156, 156, 156);
-  
-    .chartGrid {
+  background-color: #111;
+  color: rgb(156, 156, 156);
+
+  .chartGrid {
       stroke: rgba(228, 228, 228, 0.219);
-    } 
-  
-    .navbar {
+  } 
+
+  .navbar {
       color: #999;
       border-color: #333;
-  
+
       .search {
-        border-color: gray;
+          border-color: gray;
       }
-    }
-  
-    .sidebar {
+  }
+
+  .sidebar {
       background-color: #111;
       border-color: #333;
-  
+
       .top {
-        .logo {
-          color: #999;
-        }
+          .logo {
+              color: #999;
+          }
       }
       hr {
-        border-color: #333;
+          border-color: #333;
       }
-  
+
       ul {
-        li {
-          &:hover {
-            background-color: #333;
+          li {
+              &:hover {
+                  background-color: #333;
+              }
+
+              .icon {
+                  color: #999;
+              }
           }
-  
-          .icon {
-            color: #999;
-          }
-        }
       }
-    }
-  
-    .datatable {
+  }
+
+  .datatable {
       .datagrid {
-        color: gray;
-        border: none;
-        
-        div{
-          color: gray;
-          background-color: transparent;
-        }
-  
-        .viewButton {
           color: gray;
           border: none;
-        }
+          
+          div {
+              color: gray;
+              background-color: transparent;
+          }
+
+          .viewButton {
+              color: gray;
+              border: none;
+          }
       }
-    }
-    
-  
-    input{
-        background-color: transparent;
-    }
   }
+
+  .myDatatable {
+      .datagrid {
+          color: gray;
+          border: none;
+
+          .MuiDataGrid-topContainer {
+              background-color: #111;
+              color: #333;
+          }
+
+          .MuiDataGrid-cell {
+              color: gray;
+          }
+          
+          .MuiDataGrid-columnHeaderTitle {
+              color: gray;
+          }
+
+          .MuiCheckbox-root svg {
+              color: gray;
+          }
+
+          div {
+              color: gray;
+              background-color: transparent;
+          }
+
+          .viewButton {
+              color: gray;
+              border: none;
+          }
+      }
+  }
+
+  input {
+      background-color: transparent;
+      color: gray;
+  }
+}
